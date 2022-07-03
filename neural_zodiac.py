@@ -1,6 +1,5 @@
 # github.com/jcwml
 import os
-import numpy as np
 from tensorflow import keras
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
