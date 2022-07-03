@@ -3,11 +3,6 @@ import sys
 import os
 import numpy as np
 from tensorflow import keras
-from os.path import isfile
-from os.path import getsize
-from os import remove
-from struct import pack
-from time import sleep
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
