@@ -9,4 +9,4 @@ Technically this extrapolates the original dataset to compute polyamorous relati
 
 The original dataset is probably nonsense, and the extrapolation is most certainly going to be nonsense++ so take these percetages with a pinch of salt or less.
 
-Or maybe I just understated this network and the source data because honestly, after some testing, it seems to work pretty well if you think the original source data agreeable. Heading over to the website [astrology-zodiac-signs.com](https://www.astrology-zodiac-signs.com), each compatibility gives a long readout, so it's pretty easy to verify if you agree with the reasoning behind the rating for each compatibility.
+Or maybe I just understated this network and the source data because honestly, after some testing, it seems to work pretty well if you think the original source data is agreeable. Heading over to the website [astrology-zodiac-signs.com](https://www.astrology-zodiac-signs.com), each compatibility gives a long readout, so it's pretty easy to verify if you agree with the reasoning behind the rating for each compatibility.
