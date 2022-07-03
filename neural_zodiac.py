@@ -1,5 +1,4 @@
 # github.com/jcwml
-import sys
 import os
 import numpy as np
 from tensorflow import keras
