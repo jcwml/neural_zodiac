@@ -129,8 +129,6 @@ float neural_zodiac_6x32(float* input)
     return o;
 }
 
-//("aries", "taurus", "gemini", "cancer", "leo", "virgo", "libra", "scorpio", "sagittarius", "capricorn", "aquarius", "pisces");
-
 int main()
 {
     // PZLCC
