@@ -14,8 +14,6 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
 print("Welcome to the Zodiac Love Compatibility Calculator.\n\nIn the relationship please tell me how many of each zodiac will be present.\n")
 
-# ("aries", "taurus", "gemini", "cancer", "leo", "virgo", "libra", "scorpio", "sagittarius", "capricorn", "aquarius", "pisces");
-
 def getFloat():
     i = input()
     if i == '':
@@ -54,23 +52,3 @@ model = keras.models.load_model("/home/v/Desktop/neural_zodiac/multihot/models/m
 r = model.predict([[aries, taurus, gemini, cancer, leo, virgo, libra, scorpio, sagittarius, capricorn, aquarius, pisces]], verbose=0)
 print("\nInput Vector: " + istr(aries) + istr(taurus) + istr(gemini) + istr(cancer) + istr(leo) + istr(virgo) + istr(libra) + istr(scorpio) + istr(sagittarius) + istr(capricorn) + istr(aquarius) + istr(pisces))
 print("\nCompatibility: " + "{:.2f}".format(r.flatten()[0]) + '%' + "\n")
-
-
-# input_size = 96
-# model_name = sys.argv[1]
-# input_size_floats = input_size*4
-# while True:
-#         try:
-#                 sleep(0.001)
-#                 if isfile("/dev/shm/uc_input.dat") and getsize("/dev/shm/uc_input.dat") == input_size_floats:
-#                         with open("/dev/shm/uc_input.dat", 'rb') as f:
-#                                 data = np.fromfile(f, dtype=np.float32)
-#                                 remove("/dev/shm/uc_input.dat")
-#                                 if data.size == input_size:
-#                                         input = np.reshape(data, [-1, input_size])
-#                                         r = model.predict(input)
-#                                         y = r.flatten()
-#                                         with open("/dev/shm/uc_r.dat", "wb") as f2:
-#                                                 for x in y: f2.write(pack('f', x))
-#         except Exception:
-#                 pass
