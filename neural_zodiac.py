@@ -12,8 +12,6 @@ from time import sleep
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
-print("Welcome to the Zodiac Love Compatibility Calculator.\n\nIn the relationship please tell me how many of each zodiac will be present.\n")
-
 def getFloat():
     i = input()
     if i == '':
@@ -22,6 +20,8 @@ def getFloat():
 
 def istr(i):
     return str(int(i))
+
+print("Welcome to the Zodiac Love Compatibility Calculator.\n\nIn the relationship please tell me how many of each zodiac will be present.\n")
 
 print("How many Aries: ", end='')
 aries = getFloat()
