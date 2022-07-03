@@ -1,0 +1,76 @@
+# github.com/jcwml
+import sys
+import os
+import numpy as np
+from tensorflow import keras
+from os.path import isfile
+from os.path import getsize
+from os import remove
+from struct import pack
+from time import sleep
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
+
+print("Welcome to the Zodiac Love Compatibility Calculator.\n\nIn the relationship please tell me how many of each zodiac will be present.\n")
+
+# ("aries", "taurus", "gemini", "cancer", "leo", "virgo", "libra", "scorpio", "sagittarius", "capricorn", "aquarius", "pisces");
+
+def getFloat():
+    i = input()
+    if i == '':
+        return 0.0
+    return float(i)
+
+def istr(i):
+    return str(int(i))
+
+print("How many Aries: ", end='')
+aries = getFloat()
+print("How many Taurus: ", end='')
+taurus = getFloat()
+print("How many Gemini: ", end='')
+gemini = getFloat()
+print("How many Cancer: ", end='')
+cancer = getFloat()
+print("How many Leo: ", end='')
+leo = getFloat()
+print("How many Virgo: ", end='')
+virgo = getFloat()
+print("How many Libra: ", end='')
+libra = getFloat()
+print("How many Scorpio: ", end='')
+scorpio = getFloat()
+print("How many Sagittarius: ", end='')
+sagittarius = getFloat()
+print("How many Capricorn: ", end='')
+capricorn = getFloat()
+print("How many Aquarius: ", end='')
+aquarius = getFloat()
+print("How many Pisces: ", end='')
+pisces = getFloat()
+
+model = keras.models.load_model("/home/v/Desktop/neural_zodiac/multihot/models/model_tanh_adam_6_32_24_12500_a0.000001/tanh_adam_6_32_24_12500_a0.000001/")
+r = model.predict([[aries, taurus, gemini, cancer, leo, virgo, libra, scorpio, sagittarius, capricorn, aquarius, pisces]], verbose=0)
+print("\nInput Vector: " + istr(aries) + istr(taurus) + istr(gemini) + istr(cancer) + istr(leo) + istr(virgo) + istr(libra) + istr(scorpio) + istr(sagittarius) + istr(capricorn) + istr(aquarius) + istr(pisces))
+print("\nCompatibility: " + "{:.2f}".format(r.flatten()[0]) + '%' + "\n")
+
+
+# input_size = 96
+# model_name = sys.argv[1]
+# input_size_floats = input_size*4
+# while True:
+#         try:
+#                 sleep(0.001)
+#                 if isfile("/dev/shm/uc_input.dat") and getsize("/dev/shm/uc_input.dat") == input_size_floats:
+#                         with open("/dev/shm/uc_input.dat", 'rb') as f:
+#                                 data = np.fromfile(f, dtype=np.float32)
+#                                 remove("/dev/shm/uc_input.dat")
+#                                 if data.size == input_size:
+#                                         input = np.reshape(data, [-1, input_size])
+#                                         r = model.predict(input)
+#                                         y = r.flatten()
+#                                         with open("/dev/shm/uc_r.dat", "wb") as f2:
+#                                                 for x in y: f2.write(pack('f', x))
+#         except Exception:
+#                 pass
