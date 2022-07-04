@@ -46,7 +46,9 @@ Compatibility: 51.26%
 
 <details>
     <summary>A more in-depth example</summary>
-402010201001
+    
+```
+Input Vector: 402010201001
 
 4x Aries
 2x Gemini
@@ -56,6 +58,7 @@ Compatibility: 51.26%
 1x Pisces
 
 ---
+Relationship Interactions:
 
 aries-gemini, 74%
 aries-gemini, 74%
@@ -130,8 +133,9 @@ libra-sagittarius, 71%
 
 sagittarius-pisces, 50%
 
+Averaged Score:
 (74*9) + (75*6) + (83*4) + (62*8) + (87*4) + (29*4) + (82*2) + (78*4) + (92*2) + (10*2) + (75*3) + 14 + (71*2) + 50 = 3519 
-3519 / 52 = 67.67
+3519 / 52 = 67.67%
 
 ---
 
@@ -155,4 +159,6 @@ How many Pisces: 1
 Input Vector: 402010201001
 
 Compatibility: 70.45%
+```
+    
 </details>
