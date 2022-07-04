@@ -50,6 +50,7 @@ Compatibility: 51.26%
 ```
 Input Vector: 402010201001
 
+Input Vector Components:
 4x Aries
 2x Gemini
 1x Leo
@@ -58,6 +59,7 @@ Input Vector: 402010201001
 1x Pisces
 
 ---
+
 Relationship Interactions:
 
 aries-gemini, 74%
@@ -134,10 +136,12 @@ libra-sagittarius, 71%
 sagittarius-pisces, 50%
 
 Averaged Score:
-(74*9) + (75*6) + (83*4) + (62*8) + (87*4) + (29*4) + (82*2) + (78*4) + (92*2) + (10*2) + (75*3) + 14 + (71*2) + 50 = 3519 
+(74*9) + (75*9) + (83*4) + (62*8) + (87*4) + (29*4) + (82*2) + (78*4) + (92*2) + (10*2) + (71*2) + 64 = 3519 
 3519 / 52 = 67.67%
 
 ---
+
+Neural Zodiac:
 
 Welcome to the Zodiac Love Compatibility Calculator.
 
