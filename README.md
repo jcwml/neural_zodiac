@@ -9,7 +9,7 @@ Technically this extrapolates the original dataset to compute polyamorous relati
 
 After some testing, this model seems to work pretty well in terms of statistics, and as for the creditability of the source data; heading over to the website [astrology-zodiac-signs.com](https://www.astrology-zodiac-signs.com), each compatibility gives a long readout, so it's pretty easy to verify if you agree with the reasoning behind the rating for each compatibility.
 
-The only other way to have achieved an algorithm like this is to have manually computed an average, e.g., if I had a vector of 111000000000 that's aries, taurus, and gemini. I would need to write an algorithm to take these percentages from the [CSV](https://github.com/jcwml/neural_zodiac/blob/main/multihot/scraper/zodiacs.csv) and average them together:
+The only other way to have achieved an algorithm like this is to have manually computed an average, e.g., if I had a vector of 111000000000 that's Aries, Taurus, and Gemini. I would need to write an algorithm to take these percentages from the [CSV](https://github.com/jcwml/neural_zodiac/blob/main/multihot/scraper/zodiacs.csv) and average them together:
 ```
 Input Vector: 111000000000
 
