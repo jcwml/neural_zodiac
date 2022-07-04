@@ -16,8 +16,9 @@ The only other way to have achieved an algorithm like this is to have manually c
 aries-gemini,  74%
 aries-cancer,  47%
 taurus-gemini, 23%
-```
+
 (74+47+23) / 3 = 48%
+```
 
 Compare that to using the neural network:
 ```
