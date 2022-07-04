@@ -7,9 +7,7 @@ A small scraper was made to scrape the zodiac love compatibility percetages from
 
 Technically this extrapolates the original dataset to compute polyamorous relationships.
 
-The original dataset is probably nonsense, and the extrapolation is most certainly going to be nonsense++ so take these percetages with a pinch of salt or less.
-
-Or maybe I just understated this network and the source data because honestly, after some testing, it seems to work pretty well if you think the original source data is agreeable. Heading over to the website [astrology-zodiac-signs.com](https://www.astrology-zodiac-signs.com), each compatibility gives a long readout, so it's pretty easy to verify if you agree with the reasoning behind the rating for each compatibility.
+After some testing, this model seems to work pretty well in terms of statistics, and as for the creditability of the source data; heading over to the website [astrology-zodiac-signs.com](https://www.astrology-zodiac-signs.com), each compatibility gives a long readout, so it's pretty easy to verify if you agree with the reasoning behind the rating for each compatibility.
 
 The only other way to have achieved an algorithm like this is to have manually computed an average, e.g., if I had a vector of 111000000000 that's aries, taurus, and gemini. I would need to write an algorithm to take these percentages from the [CSV](https://github.com/jcwml/neural_zodiac/blob/main/multihot/scraper/zodiacs.csv) and average them together:
 ```
