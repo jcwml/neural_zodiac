@@ -14,7 +14,7 @@ Or maybe I just understated this network and the source data because honestly, a
 The only other way to have achieved an algorithm like this is to have manually computed an average, e.g., if I had a vector of 111000000000 that's aries, taurus, and gemini. I would need to write an algorithm to take these percentages from the [CSV](https://github.com/jcwml/neural_zodiac/blob/main/multihot/scraper/zodiacs.csv) and average them together:
 ```
 aries-gemini,  74%
-aries-taurus	 63%
+aries-taurus   63%
 taurus-gemini, 23%
 
 (74+63+23) / 3 = 53.33%
