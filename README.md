@@ -11,6 +11,12 @@ After some testing, this model seems to work pretty well in terms of statistics,
 
 The only other way to have achieved an algorithm like this is to have manually computed an average, e.g., if I had a vector of 111000000000 that's aries, taurus, and gemini. I would need to write an algorithm to take these percentages from the [CSV](https://github.com/jcwml/neural_zodiac/blob/main/multihot/scraper/zodiacs.csv) and average them together:
 ```
+Input Vector: 111000000000
+
+1x Aries
+1x Taurus
+1x Gemini
+
 aries-gemini,  74%
 aries-taurus,  63%
 taurus-gemini, 23%
