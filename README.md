@@ -43,3 +43,10 @@ Input Vector: 111000000000
 
 Compatibility: 51.26%
 ```
+
+<details>
+    <summary>A more in-depth example</summary>
+```
+test
+```
+</details>
