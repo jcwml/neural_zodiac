@@ -46,7 +46,113 @@ Compatibility: 51.26%
 
 <details>
     <summary>A more in-depth example</summary>
-```
-test
-```
+402010201001
+
+4x Aries
+2x Gemini
+1x Leo
+2x Libra
+1x Sagittarius
+1x Pisces
+
+---
+
+aries-gemini, 74%
+aries-gemini, 74%
+aries-gemini, 74%
+aries-gemini, 74%
+
+aries-gemini, 74%
+aries-gemini, 74%
+aries-gemini, 74%
+aries-gemini, 74%
+
+aries-gemini, 74%
+
+aries-aries, 75%
+aries-aries, 75%
+aries-aries, 75%
+
+aries-aries, 75%
+aries-aries, 75%
+
+aries-aries, 75%
+
+aries-leo, 83%
+aries-leo, 83%
+aries-leo, 83%
+aries-leo, 83%
+
+aries-libra, 62%
+aries-libra, 62%
+aries-libra, 62%
+aries-libra, 62%
+
+aries-libra, 62%
+aries-libra, 62%
+aries-libra, 62%
+aries-libra, 62%
+
+aries-sagittarius, 87%
+aries-sagittarius, 87%
+aries-sagittarius, 87%
+aries-sagittarius, 87%
+
+aries-pisces, 29%
+aries-pisces, 29%
+aries-pisces, 29%
+aries-pisces, 29%
+
+gemini-leo, 82%
+gemini-leo, 82%
+
+gemini-libra, 78%
+gemini-libra, 78%
+
+gemini-libra, 78%
+gemini-libra, 78%
+
+gemini-sagittarius, 92%
+gemini-sagittarius, 92%
+
+gemini-pisces, 10%
+gemini-pisces, 10%
+
+leo-libra, 75%
+leo-libra, 75%
+
+leo-sagittarius, 75%
+
+leo-pisces, 14%
+
+libra-sagittarius, 71%
+libra-sagittarius, 71%
+
+sagittarius-pisces, 50%
+
+(74*9) + (75*6) + (83*4) + (62*8) + (87*4) + (29*4) + (82*2) + (78*4) + (92*2) + (10*2) + (75*3) + 14 + (71*2) + 50 = 3519 
+3519 / 52 = 67.67
+
+---
+
+Welcome to the Zodiac Love Compatibility Calculator.
+
+In the relationship please tell me how many of each zodiac will be present.
+
+How many Aries: 4
+How many Taurus: 
+How many Gemini: 2
+How many Cancer: 
+How many Leo: 1
+How many Virgo: 
+How many Libra: 2
+How many Scorpio: 
+How many Sagittarius: 1
+How many Capricorn: 
+How many Aquarius: 
+How many Pisces: 1
+
+Input Vector: 402010201001
+
+Compatibility: 70.45%
 </details>
