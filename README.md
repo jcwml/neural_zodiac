@@ -105,6 +105,8 @@ aries-pisces, 29%
 aries-pisces, 29%
 aries-pisces, 29%
 aries-pisces, 29%
+    
+gemini-gemini, 83%
 
 gemini-leo, 82%
 gemini-leo, 82%
@@ -128,14 +130,16 @@ leo-sagittarius, 75%
 
 leo-pisces, 14%
 
+libra-libra, 68%
+
 libra-sagittarius, 71%
 libra-sagittarius, 71%
 
 sagittarius-pisces, 50%
 
 Averaged Score:
-(74*8) + (75*9) + (83*4) + (62*8) + (87*4) + (29*4) + (82*2) + (78*4) + (92*2) + (10*2) + (71*2) + 64 = 3445 
-3445 / 51 = 67.54%
+(74*8) + (75*9) + (83*5) + (62*8) + (87*4) + (29*4) + (82*2) + (78*4) + (92*2) + (10*2) + (71*2) + 132 = 3596 
+3596 / 53 = 67.84%
 
 ---
 
