@@ -1,7 +1,7 @@
 # neural_zodiac
 A Feed-forward Neural Network trained to predict zodiac love compatibility.
 
-Ignore [onehot](/onehot), this was the original approach before I realised [multihot](/multihot) was a better fitting idea. *Technically the term "multi-hot vector" means that you can specify more than one class at a time in the input vector, which is what the onehot approach in this code base allows, so technically the onehot version is a multihot vector and the multihot version is a multi-hot vector that allows a magnitude on each vector element/position.* Jargon!
+Ignore [onehot](/onehot), this was the original approach before I realised [multihot](/multihot) was a better fitting idea. *Technically the term "multi-hot vector" means that you can specify more than one class at a time in the input vector, which is what the onehot approach in this code base allows, so technically the onehot version is a multihot vector and the multihot version is a multi-hot vector that allows a magnitude on each vector element/position. Jargon!*
 
 A small scraper was made to scape the zodiac love compatibility percetages from [astrology-zodiac-signs.com](https://www.astrology-zodiac-signs.com) ([multihot/scraper](multihot/scraper/scraper.php)) the dataset generated was then used to train a neural network that has a onehot vector input, although I ended up using a "multihot" vector to represent multiple of each category, this fits better with say aries-aries compatibility as you just pass a 2 into the multihot vector at the aries position.
 
