@@ -172,6 +172,6 @@ Input Vector: 402010201001
 
 Compatibility: 70.45%
 ```
-You can see that even under complex inputs the neural models holds up.
+You can see that even under complex inputs the neural model holds up.
 
 </details>
