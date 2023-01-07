@@ -7,6 +7,7 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
+from tensorflow.keras.callbacks import Callback
 from random import seed, uniform, getrandbits
 from time import time_ns
 from sys import exit
@@ -27,7 +28,7 @@ from os.path import isdir
 
 # disable warnings
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-//os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
+#os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
 # print everything / no truncations
 np.set_printoptions(threshold=sys.maxsize)
@@ -47,10 +48,10 @@ optimiser = 'adam'
 activator = 'tanh'
 inputsize = 12
 outputsize = 1
-epoches = 6
-layers = 0
-layer_units = 128
-batches = 128
+layers = 6
+layer_units = 32
+batches = 24
+epoches = 12500
 
 # load options
 argc = len(sys.argv)
@@ -164,8 +165,31 @@ elif optimiser == 'ftrl':
 
 model.compile(optimizer=optim, loss='mean_squared_error')
 
+# stop at specific loss
+class EarlyStoppingByLossVal(Callback):
+    def __init__(self, monitor='loss', value=0.00001, verbose=0):
+        super(Callback, self).__init__()
+        self.monitor = monitor
+        self.value = value
+        self.verbose = verbose
+
+    def on_epoch_end(self, epoch, logs={}):
+        current = logs.get(self.monitor)
+        if current is None:
+            print("\nEarly stopping requires %s available!" % self.monitor, RuntimeWarning)
+            exit()
+
+        if current < self.value:
+            if self.verbose > 0:
+                print("\nEpoch %05d: early stop" % epoch)
+            self.model.stop_training = True
+
+callbacks = [
+    EarlyStoppingByLossVal(monitor='loss', value=0.0000001, verbose=1),
+]
+
 # train network
-history = model.fit(train_x, train_y, epochs=epoches, batch_size=batches)
+history = model.fit(train_x, train_y, epochs=epoches, batch_size=batches, callbacks=callbacks)
 model_name = model_name + "_" + "a{:E}".format(history.history['loss'][-1])
 timetaken = (time_ns()-st)/1e+9
 print("\nTime Taken:", "{:.2f}".format(timetaken), "seconds")
@@ -183,11 +207,9 @@ f = open(model_name + "_layers.h", "w")
 f.write("#ifndef " + project + "_layers\n#define " + project + "_layers\n\n")
 if f:
     for layer in model.layers:
-        total_layer_weights = layer.get_weights()[0].flatten().shape[0]
+        total_layer_weights = layer.get_weights()[0].transpose().flatten().shape[0]
         total_layer_units = layer.units
         layer_weights_per_unit = total_layer_weights / total_layer_units
-        #print(layer.get_weights()[0].flatten().shape)
-        #print(layer.units)
         print("+ Layer:", li)
         print("Total layer weights:", total_layer_weights)
         print("Total layer units:", total_layer_units)
@@ -198,7 +220,7 @@ if f:
         wc = 0
         bc = 0
         if layer.get_weights() != []:
-            for weight in layer.get_weights()[0].flatten():
+            for weight in layer.get_weights()[0].transpose().flatten():
                 wc += 1
                 if isfirst == 0:
                     f.write(str(weight))
@@ -206,8 +228,7 @@ if f:
                 else:
                     f.write("," + str(weight))
                 if wc == layer_weights_per_unit:
-                    f.write(", /* bias */ " + str(layer.get_weights()[1].flatten()[bc]))
-                    #print("bias", str(layer.get_weights()[1].flatten()[bc]))
+                    f.write(", /* bias */ " + str(layer.get_weights()[1].transpose().flatten()[bc]))
                     wc = 0
                     bc += 1
         f.write("};\n\n")
